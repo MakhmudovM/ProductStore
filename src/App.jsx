@@ -15,8 +15,10 @@ function App() {
     <div className='max-w-4xl mx-auto'>
       <Navbar/>
       <ProductsList/>
-      <span>Total Price:</span>
-      <p>{0}$</p>
+      <div className='flex items-center justify-center mt-20'>
+        <span className='text-2xl text-center'>Total Price:</span>
+        <p className='text-2xl ml-4'>{0}$</p>
+      </div>
     </div>
   )
 }

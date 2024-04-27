@@ -43,5 +43,5 @@ export const productsSlice = createSlice({
         }
     }
 })
-export const { increaseAmount , decreaseAmount , calulateTotal } = productsSlice.actions
+export const { increaseAmount , decreaseAmount , calulateTotal ,  } = productsSlice.actions
 export default productsSlice.reducer
