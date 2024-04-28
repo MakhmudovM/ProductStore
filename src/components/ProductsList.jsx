@@ -40,7 +40,7 @@ import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "..
           ))}
         
         </ul>
-        <div className='flex items-center justify-center mt-20'>
+        <div className='flex items-center justify-center mt-3'>
         <span className='text-2xl text-center'>Total Price:</span>
         <p className='text-2xl ml-4'>{price}$</p>
       </div>
