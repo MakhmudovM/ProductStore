@@ -12,13 +12,10 @@ function App() {
 
   },[])
   return (
-    <div className='max-w-4xl mx-auto'>
+    <div className='max-w-4xl mx-auto mb-10'>
       <Navbar/>
       <ProductsList/>
-      <div className='flex items-center justify-center mt-20'>
-        <span className='text-2xl text-center'>Total Price:</span>
-        <p className='text-2xl ml-4'>{0}$</p>
-      </div>
+     
     </div>
   )
 }
