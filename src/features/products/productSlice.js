@@ -26,9 +26,12 @@ export const productsSlice = createSlice({
             item.amount -=1;
             productsSlice.caseReducers.calulateTotal(state);
         },
-        removeItem:(state, {payload}) => {
+        removeItem: (state, { payload }) => {
+            state.products = state.products.filter(
+              (product) => product.id !== payload
+            );
             productsSlice.caseReducers.calulateTotal(state);
-        },
+          },
         calulateTotal: (state) => {
             let price = 0;
             let total = 0;

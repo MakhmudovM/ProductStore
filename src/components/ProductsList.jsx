@@ -8,9 +8,11 @@ import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "..
   const ProductsList = () => {
     const dispatch = useDispatch()
     const {products} = useSelector((store) => store.products)
+    
+    const {price} = useSelector((store)=> store.products)
     return (
       <div>
-        <ul className="">
+        <ul className="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-3  ">
           {products.map((product)=>(
             <li key={product.id} className="mb-10">
           <div className="card card-side bg-base-100 shadow-xl">
@@ -23,9 +25,9 @@ import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "..
         </div>
             </div>
             <div className="flex items-center p-20 text-3xl gap-3">
-        <button onClick={()=> {dispatch(increaseAmount(product.id))}}>+</button>
-        <span>{product.amount}</span>
-        <button onClick={()=> {
+        <button className="btn" onClick={()=> {dispatch(increaseAmount(product.id))}}>+</button>
+        <span className="btn">{product.amount}</span>
+        <button className="btn" onClick={()=> {
           if(product.amount > 1) {
             dispatch(decreaseAmount(product.id))
           } else {
@@ -40,7 +42,7 @@ import { calulateTotal , decreaseAmount , increaseAmount , removeItem } from "..
         </ul>
         <div className='flex items-center justify-center mt-20'>
         <span className='text-2xl text-center'>Total Price:</span>
-        <p className='text-2xl ml-4'>{calulateTotal}$</p>
+        <p className='text-2xl ml-4'>{price}$</p>
       </div>
       </div>
       
